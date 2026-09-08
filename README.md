@@ -1,5 +1,4 @@
 # MongoDB
-# MongoDB
 Atlas atlas-3m3ssv-shard-0 [primary] test> db.students.insertMany([
 |     {
 |         rollNo: 101,
