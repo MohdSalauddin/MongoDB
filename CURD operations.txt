@@ -1,0 +1,2038 @@
+Microsoft Windows [Version 10.0.26200.9278]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\mrsal>mongosh "mongodb+srv://cluster0.wfhvge6.mongodb.net/" --apiVersion 1 --username mohdsalauddin0215_db_user
+Enter password: ****************
+Current Mongosh Log ID: 6aa0d6b8bf0c1c5c7fa25307
+Connecting to:          mongodb+srv://<credentials>@cluster0.wfhvge6.mongodb.net/?appName=mongosh+2.10.0
+Using MongoDB:          8.0.32 (API Version 1)
+Using Mongosh:          2.10.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+Atlas atlas-clqdkj-shard-0 [primary] test> use Student
+switched to db Student
+Atlas atlas-clqdkj-shard-0 [primary] Student> show dbs
+Student       288.00 KiB
+companies      72.00 KiB
+sample_mflix  142.01 MiB
+test           72.00 KiB
+admin                0 B
+local                0 B
+Atlas atlas-clqdkj-shard-0 [primary] Student> db.company.delete({})
+TypeError: db.company.delete is not a function
+Atlas atlas-clqdkj-shard-0 [primary] Student> db.company.deleteMany({})
+{ acknowledged: true, deletedCount: 8 }
+Atlas atlas-clqdkj-shard-0 [primary] Student> db.company.insertMany([
+|     {
+|         companyId: 301,
+|         name: "Vasanth Technologies",
+|         foundedYear: 2015,
+|         industry: "IT Services",
+|         revenue: 85000000,
+|         products: ["Cloud Hosting", "App Development", "MongoDB Consulting"],
+|         address: {
+|             city: "Chennai",
+|             state: "Tamil Nadu"
+|         },
+|         isPublic: true
+|     },
+|     {
+|         companyId: 302,
+|         name: "Rahul Electronics",
+|         foundedYear: 2008,
+|         industry: "Hardware",
+|         revenue: 72000000,
+|         products: ["Circuit Boards", "Sensors", "Arduino Kits"],
+|         address: {
+|             city: "Bangalore",
+|             state: "Karnataka"
+|         },
+|         isPublic: false
+|     },
+|     {
+|         companyId: 303,
+|         name: "Priya AI Solutions",
+|         foundedYear: 2019,
+|         industry: "Artificial Intelligence",
+|         revenue: 91000000,
+|         products: ["ML Platforms", "Chatbots", "Data Analytics"],
+|         address: {
+|             city: "Chennai",
+|             state: "Tamil Nadu"
+|         },
+|         isPublic: true
+|     },
+|     {
+|         companyId: 304,
+|         name: "Arjun Manufacturing",
+|         foundedYear: 2000,
+|         industry: "Mechanical",
+|         revenue: 68000000,
+|         products: ["Auto Parts", "Machinery"],
+|         address: {
+|             city: "Hyderabad",
+|             state: "Telangana"
+|         }
+|     },
+|     {
+|         companyId: 305,
+|         name: "Sneha Softwares",
+|         foundedYear: 2012,
+|         industry: "IT",
+|         revenue: 88000000,
+|         products: ["Web Development", "Database Solutions"],
+|         address: {
+|             city: "Chennai",
+|             state: "Tamil Nadu"
+|         },
+|         isPublic: true
+|     },
+|     {
+|         companyId: 306,
+|         name: "Kiran Power Systems",
+|         foundedYear: 2005,
+|         industry: "Electrical",
+|         revenue: 65000000,
+|         products: ["Transformers", "Motors", "Control Panels"],
+|         address: {
+|             city: "Pune",
+|             state: "Maharashtra"
+|         },
+|         isPublic: false
+|     },
+|     {
+|         companyId: 307,
+|         name: "Anjali Innovations",
+|         foundedYear: 2020,
+|         industry: "Artificial Intelligence",
+|         revenue: 95000000,
+|         products: ["AI Research", "MongoDB Analytics Tools"],
+|         address: {
+|             city: "Bangalore",
+|             state: "Karnataka"
+|         },
+|         isPublic: true
+|     },
+|     {
+|         companyId: 308,
+|         name: "Rohit Web Works",
+|         foundedYear: 2017,
+|         industry: "IT",
+|         revenue: 76000000,
+|         products: ["Frontend Design", "UI/UX"],
+|         address: {
+|             city: "Hyderabad",
+|             state: "Telangana"
+|         },
+|         isPublic: false
+|     }
+| ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6aa0d75abf0c1c5c7fa25308'),
+    '1': ObjectId('6aa0d75abf0c1c5c7fa25309'),
+    '2': ObjectId('6aa0d75abf0c1c5c7fa2530a'),
+    '3': ObjectId('6aa0d75abf0c1c5c7fa2530b'),
+    '4': ObjectId('6aa0d75abf0c1c5c7fa2530c'),
+    '5': ObjectId('6aa0d75abf0c1c5c7fa2530d'),
+    '6': ObjectId('6aa0d75abf0c1c5c7fa2530e'),
+    '7': ObjectId('6aa0d75abf0c1c5c7fa2530f')
+  }
+}
+Atlas atlas-clqdkj-shard-0 [primary] Student> db.placementdrive.deleteMany({})
+{ acknowledged: true, deletedCount: 8 }
+Atlas atlas-clqdkj-shard-0 [primary] Student> db.placementdrive.insertMany([
+|     {
+|         driveId: 401,
+|         companyName: "TCS",
+|         role: "Software Engineer",
+|         package: 350000,
+|         eligibleDepartments: ["CSE", "IT", "ECE"],
+|         minMarks: 60,
+|         skillsRequired: ["Java", "SQL", "Problem Solving"],
+|         driveDate: new Date("2026-09-15"),
+|         venue: {
+|             city: "Chennai",
+|             state: "Tamil Nadu"
+|         },
+|         isInternshipOffered: true
+|     },
+|     {
+|         driveId: 402,
+|         companyName: "Infosys",
+|         role: "Systems Engineer",
+|         package: 375000,
+|         eligibleDepartments: ["CSE", "ECE", "EEE"],
+|         minMarks: 65,
+|         skillsRequired: ["Python", "Communication"],
+|         driveDate: new Date("2026-09-18"),
+|         venue: {
+|             city: "Bangalore",
+|             state: "Karnataka"
+|         },
+|         isInternshipOffered: false
+|     },
+|     {
+|         driveId: 403,
+|         companyName: "Zoho",
+|         role: "Software Developer",
+|         package: 600000,
+|         eligibleDepartments: ["CSE", "IT"],
+|         minMarks: 75,
+|         skillsRequired: ["Java", "Python", "MongoDB", "DSA"],
+|         driveDate: new Date("2026-09-20"),
+|         venue: {
+|             city: "Chennai",
+|             state: "Tamil Nadu"
+|         },
+|         isInternshipOffered: true
+|     },
+|     {
+|         driveId: 404,
+|         companyName: "Bosch",
+|         role: "Embedded Engineer",
+|         package: 500000,
+|         eligibleDepartments: ["ECE", "EEE", "MECH"],
+|         minMarks: 70,
+|         skillsRequired: ["C", "Embedded C", "Arduino"],
+|         driveDate: new Date("2026-09-22"),
+|         venue: {
+|             city: "Pune",
+|             state: "Maharashtra"
+|         },
+|         isInternshipOffered: false
+|     },
+|     {
+|         driveId: 405,
+|         companyName: "Google",
+|         role: "Software Engineer",
+|         package: 2500000,
+|         eligibleDepartments: ["CSE", "IT"],
+|         minMarks: 85,
+|         skillsRequired: ["Java", "Python", "AI", "DSA", "System Design"],
+|         driveDate: new Date("2026-09-25"),
+|         venue: {
+|             city: "Bangalore",
+|             state: "Karnataka"
+|         },
+|         isInternshipOffered: true
+|     },
+|     {
+|         driveId: 406,
+|         companyName: "L&T",
+|         role: "Design Engineer",
+|         package: 450000,
+|         eligibleDepartments: ["MECH", "CIVIL"],
+|         minMarks: 60,
+|         skillsRequired: ["AutoCAD", "STAAD", "SolidWorks"],
+|         driveDate: new Date("2026-09-28"),
+|         venue: {
+|             city: "Hyderabad",
+|             state: "Telangana"
+|         },
+|         isInternshipOffered: false
+|     },
+|     {
+|         driveId: 407,
+|         companyName: "Amazon",
+|         role: "SDE-1",
+|         package: 1800000,
+|         eligibleDepartments: ["CSE", "IT", "ECE"],
+|         minMarks: 80,
+|         skillsRequired: ["Java", "JavaScript", "DSA", "Cloud"],
+|         driveDate: new Date("2026-10-02"),
+|         venue: {
+|             city: "Hyderabad",
+|             state: "Telangana"
+|         },
+|         isInternshipOffered: true
+|     },
+|     {
+|         driveId: 408,
+|         companyName: "Wipro",
+|         role: "Project Engineer",
+|         package: 320000,
+|         eligibleDepartments: ["CSE", "EEE", "ECE"],
+|         minMarks: 55,
+|         skillsRequired: ["C", "Python", "Communication"],
+|         driveDate: new Date("2026-10-05"),
+|         venue: {
+|             city: "Chennai",
+|             state: "Tamil Nadu"
+|         },
+|         isInternshipOffered: false
+|     }
+| ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6aa0d78bbf0c1c5c7fa25310'),
+    '1': ObjectId('6aa0d78bbf0c1c5c7fa25311'),
+    '2': ObjectId('6aa0d78bbf0c1c5c7fa25312'),
+    '3': ObjectId('6aa0d78bbf0c1c5c7fa25313'),
+    '4': ObjectId('6aa0d78bbf0c1c5c7fa25314'),
+    '5': ObjectId('6aa0d78bbf0c1c5c7fa25315'),
+    '6': ObjectId('6aa0d78bbf0c1c5c7fa25316'),
+    '7': ObjectId('6aa0d78bbf0c1c5c7fa25317')
+  }
+}
+Atlas atlas-clqdkj-shard-0 [primary] Student> use ecomDB
+switched to db ecomDB
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> show dbs
+Student       288.00 KiB
+ecomDB          8.00 KiB
+sample_mflix  142.01 MiB
+test           72.00 KiB
+admin                0 B
+local                0 B
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> show collections
+products
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> for (let i = 1; i <= 50; i++) {
+|
+|     db.products.insertOne({
+|         productId: i,
+|         productName: "Product " + i ,
+|         category:
+|             i % 5 === 0 ? "Laptop" :
+|             i % 5 === 1 ? "Mobile" :
+|             i % 5 === 2 ? "Headphones" :
+|             i % 5 === 3 ? "Keyboard" :
+|                           "Mouse",
+|
+|         brand:
+|             i % 3 === 0 ? "Dell" :
+|             i % 3 === 1 ? "Samsung" :
+|                           "HP",
+|
+|         price: 1000 + (i * 500),
+|
+|         stock: 10 + i,
+|
+|         rating: 3 + ((i % 3) * 0.5),
+|
+|         inStock: i % 4 !== 0,
+|
+|         tags: [
+|             "electronics",
+|             i % 2 === 0 ? "featured" : "new"
+|         ],
+|
+|         seller: {
+|             sellerId: 1000 + i,
+|             sellerName: "Seller " + i
+|         },
+|
+|         createdAt: new Date()
+|     });
+| }
+{
+  acknowledged: true,
+  insertedId: ObjectId('6aa0dd83bf0c1c5c7fa25349')
+}
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.countDocuments()
+100
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.product.find({category: "Laptop"})
+
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({category: "Laptop"})
+[
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa2531c'),
+    productId: 5,
+    productName: 'Product 5',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 3500,
+    stock: 15,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1005, sellerName: 'Seller 5' },
+    createdAt: ISODate('2026-09-09T04:15:57.252Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa25321'),
+    productId: 10,
+    productName: 'Product 10',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 6000,
+    stock: 20,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1010, sellerName: 'Seller 10' },
+    createdAt: ISODate('2026-09-09T04:15:57.763Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25326'),
+    productId: 15,
+    productName: 'Product 15',
+    category: 'Laptop',
+    brand: 'Dell',
+    price: 8500,
+    stock: 25,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1015, sellerName: 'Seller 15' },
+    createdAt: ISODate('2026-09-09T04:15:58.480Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa2532b'),
+    productId: 20,
+    productName: 'Product 20',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 11000,
+    stock: 30,
+    rating: 4,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1020, sellerName: 'Seller 20' },
+    createdAt: ISODate('2026-09-09T04:15:59.096Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa25330'),
+    productId: 25,
+    productName: 'Product 25',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 13500,
+    stock: 35,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1025, sellerName: 'Seller 25' },
+    createdAt: ISODate('2026-09-09T04:15:59.980Z')
+  },
+  {
+    _id: ObjectId('6aa0dd80bf0c1c5c7fa25335'),
+    productId: 30,
+    productName: 'Product 30',
+    category: 'Laptop',
+    brand: 'Dell',
+    price: 16000,
+    stock: 40,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1030, sellerName: 'Seller 30' },
+    createdAt: ISODate('2026-09-09T04:16:00.527Z')
+  },
+  {
+    _id: ObjectId('6aa0dd81bf0c1c5c7fa2533a'),
+    productId: 35,
+    productName: 'Product 35',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 18500,
+    stock: 45,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1035, sellerName: 'Seller 35' },
+    createdAt: ISODate('2026-09-09T04:16:01.461Z')
+  },
+  {
+    _id: ObjectId('6aa0dd82bf0c1c5c7fa2533f'),
+    productId: 40,
+    productName: 'Product 40',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 21000,
+    stock: 50,
+    rating: 3.5,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1040, sellerName: 'Seller 40' },
+    createdAt: ISODate('2026-09-09T04:16:02.165Z')
+  },
+  {
+    _id: ObjectId('6aa0dd82bf0c1c5c7fa25344'),
+    productId: 45,
+    productName: 'Product 45',
+    category: 'Laptop',
+    brand: 'Dell',
+    price: 23500,
+    stock: 55,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1045, sellerName: 'Seller 45' },
+    createdAt: ISODate('2026-09-09T04:16:02.986Z')
+  },
+  {
+    _id: ObjectId('6aa0dd83bf0c1c5c7fa25349'),
+    productId: 50,
+    productName: 'Product 50',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 26000,
+    stock: 60,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1050, sellerName: 'Seller 50' },
+    createdAt: ISODate('2026-09-09T04:16:03.510Z')
+  },
+  {
+    _id: ObjectId('6aa0ddc8bf0c1c5c7fa2534e'),
+    productId: 5,
+    productName: 'Product 5',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 3500,
+    stock: 15,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1005, sellerName: 'Seller 5' },
+    createdAt: ISODate('2026-09-09T04:17:12.786Z')
+  },
+  {
+    _id: ObjectId('6aa0ddc9bf0c1c5c7fa25353'),
+    productId: 10,
+    productName: 'Product 10',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 6000,
+    stock: 20,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1010, sellerName: 'Seller 10' },
+    createdAt: ISODate('2026-09-09T04:17:13.448Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcabf0c1c5c7fa25358'),
+    productId: 15,
+    productName: 'Product 15',
+    category: 'Laptop',
+    brand: 'Dell',
+    price: 8500,
+    stock: 25,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1015, sellerName: 'Seller 15' },
+    createdAt: ISODate('2026-09-09T04:17:14.264Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcabf0c1c5c7fa2535d'),
+    productId: 20,
+    productName: 'Product 20',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 11000,
+    stock: 30,
+    rating: 4,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1020, sellerName: 'Seller 20' },
+    createdAt: ISODate('2026-09-09T04:17:14.775Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcbbf0c1c5c7fa25362'),
+    productId: 25,
+    productName: 'Product 25',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 13500,
+    stock: 35,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1025, sellerName: 'Seller 25' },
+    createdAt: ISODate('2026-09-09T04:17:15.280Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcbbf0c1c5c7fa25367'),
+    productId: 30,
+    productName: 'Product 30',
+    category: 'Laptop',
+    brand: 'Dell',
+    price: 16000,
+    stock: 40,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1030, sellerName: 'Seller 30' },
+    createdAt: ISODate('2026-09-09T04:17:15.791Z')
+  },
+  {
+    _id: ObjectId('6aa0ddccbf0c1c5c7fa2536c'),
+    productId: 35,
+    productName: 'Product 35',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 18500,
+    stock: 45,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1035, sellerName: 'Seller 35' },
+    createdAt: ISODate('2026-09-09T04:17:16.521Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcdbf0c1c5c7fa25371'),
+    productId: 40,
+    productName: 'Product 40',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 21000,
+    stock: 50,
+    rating: 3.5,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1040, sellerName: 'Seller 40' },
+    createdAt: ISODate('2026-09-09T04:17:17.131Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcdbf0c1c5c7fa25376'),
+    productId: 45,
+    productName: 'Product 45',
+    category: 'Laptop',
+    brand: 'Dell',
+    price: 23500,
+    stock: 55,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1045, sellerName: 'Seller 45' },
+    createdAt: ISODate('2026-09-09T04:17:17.643Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcebf0c1c5c7fa2537b'),
+    productId: 50,
+    productName: 'Product 50',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 26000,
+    stock: 60,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1050, sellerName: 'Seller 50' },
+    createdAt: ISODate('2026-09-09T04:17:18.463Z')
+  }
+]
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({instock: true})
+
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({inStock: true})
+[
+  {
+    _id: ObjectId('6aa0dd7cbf0c1c5c7fa25318'),
+    productId: 1,
+    productName: 'Product 1',
+    category: 'Mobile',
+    brand: 'Samsung',
+    price: 1500,
+    stock: 11,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1001, sellerName: 'Seller 1' },
+    createdAt: ISODate('2026-09-09T04:15:56.629Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7cbf0c1c5c7fa25319'),
+    productId: 2,
+    productName: 'Product 2',
+    category: 'Headphones',
+    brand: 'HP',
+    price: 2000,
+    stock: 12,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1002, sellerName: 'Seller 2' },
+    createdAt: ISODate('2026-09-09T04:15:56.867Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa2531a'),
+    productId: 3,
+    productName: 'Product 3',
+    category: 'Keyboard',
+    brand: 'Dell',
+    price: 2500,
+    stock: 13,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1003, sellerName: 'Seller 3' },
+    createdAt: ISODate('2026-09-09T04:15:57.049Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa2531c'),
+    productId: 5,
+    productName: 'Product 5',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 3500,
+    stock: 15,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1005, sellerName: 'Seller 5' },
+    createdAt: ISODate('2026-09-09T04:15:57.252Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa2531d'),
+    productId: 6,
+    productName: 'Product 6',
+    category: 'Mobile',
+    brand: 'Dell',
+    price: 4000,
+    stock: 16,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1006, sellerName: 'Seller 6' },
+    createdAt: ISODate('2026-09-09T04:15:57.354Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa2531e'),
+    productId: 7,
+    productName: 'Product 7',
+    category: 'Headphones',
+    brand: 'Samsung',
+    price: 4500,
+    stock: 17,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1007, sellerName: 'Seller 7' },
+    createdAt: ISODate('2026-09-09T04:15:57.458Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa25320'),
+    productId: 9,
+    productName: 'Product 9',
+    category: 'Mouse',
+    brand: 'Dell',
+    price: 5500,
+    stock: 19,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1009, sellerName: 'Seller 9' },
+    createdAt: ISODate('2026-09-09T04:15:57.671Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa25321'),
+    productId: 10,
+    productName: 'Product 10',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 6000,
+    stock: 20,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1010, sellerName: 'Seller 10' },
+    createdAt: ISODate('2026-09-09T04:15:57.763Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa25322'),
+    productId: 11,
+    productName: 'Product 11',
+    category: 'Mobile',
+    brand: 'HP',
+    price: 6500,
+    stock: 21,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1011, sellerName: 'Seller 11' },
+    createdAt: ISODate('2026-09-09T04:15:57.865Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25324'),
+    productId: 13,
+    productName: 'Product 13',
+    category: 'Keyboard',
+    brand: 'Samsung',
+    price: 7500,
+    stock: 23,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1013, sellerName: 'Seller 13' },
+    createdAt: ISODate('2026-09-09T04:15:58.176Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25325'),
+    productId: 14,
+    productName: 'Product 14',
+    category: 'Mouse',
+    brand: 'HP',
+    price: 8000,
+    stock: 24,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1014, sellerName: 'Seller 14' },
+    createdAt: ISODate('2026-09-09T04:15:58.276Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25326'),
+    productId: 15,
+    productName: 'Product 15',
+    category: 'Laptop',
+    brand: 'Dell',
+    price: 8500,
+    stock: 25,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1015, sellerName: 'Seller 15' },
+    createdAt: ISODate('2026-09-09T04:15:58.480Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25328'),
+    productId: 17,
+    productName: 'Product 17',
+    category: 'Headphones',
+    brand: 'HP',
+    price: 9500,
+    stock: 27,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1017, sellerName: 'Seller 17' },
+    createdAt: ISODate('2026-09-09T04:15:58.691Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25329'),
+    productId: 18,
+    productName: 'Product 18',
+    category: 'Keyboard',
+    brand: 'Dell',
+    price: 10000,
+    stock: 28,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1018, sellerName: 'Seller 18' },
+    createdAt: ISODate('2026-09-09T04:15:58.889Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa2532a'),
+    productId: 19,
+    productName: 'Product 19',
+    category: 'Mouse',
+    brand: 'Samsung',
+    price: 10500,
+    stock: 29,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1019, sellerName: 'Seller 19' },
+    createdAt: ISODate('2026-09-09T04:15:58.993Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa2532c'),
+    productId: 21,
+    productName: 'Product 21',
+    category: 'Mobile',
+    brand: 'Dell',
+    price: 11500,
+    stock: 31,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1021, sellerName: 'Seller 21' },
+    createdAt: ISODate('2026-09-09T04:15:59.196Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa2532d'),
+    productId: 22,
+    productName: 'Product 22',
+    category: 'Headphones',
+    brand: 'Samsung',
+    price: 12000,
+    stock: 32,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1022, sellerName: 'Seller 22' },
+    createdAt: ISODate('2026-09-09T04:15:59.663Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa2532e'),
+    productId: 23,
+    productName: 'Product 23',
+    category: 'Keyboard',
+    brand: 'HP',
+    price: 12500,
+    stock: 33,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1023, sellerName: 'Seller 23' },
+    createdAt: ISODate('2026-09-09T04:15:59.765Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa25330'),
+    productId: 25,
+    productName: 'Product 25',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 13500,
+    stock: 35,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1025, sellerName: 'Seller 25' },
+    createdAt: ISODate('2026-09-09T04:15:59.980Z')
+  },
+  {
+    _id: ObjectId('6aa0dd80bf0c1c5c7fa25331'),
+    productId: 26,
+    productName: 'Product 26',
+    category: 'Mobile',
+    brand: 'HP',
+    price: 14000,
+    stock: 36,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1026, sellerName: 'Seller 26' },
+    createdAt: ISODate('2026-09-09T04:16:00.125Z')
+  }
+]
+Type "it" for more
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({ price: {$gt: 20000}})
+[
+  {
+    _id: ObjectId('6aa0dd81bf0c1c5c7fa2533e'),
+    productId: 39,
+    productName: 'Product 39',
+    category: 'Mouse',
+    brand: 'Dell',
+    price: 20500,
+    stock: 49,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1039, sellerName: 'Seller 39' },
+    createdAt: ISODate('2026-09-09T04:16:01.964Z')
+  },
+  {
+    _id: ObjectId('6aa0dd82bf0c1c5c7fa2533f'),
+    productId: 40,
+    productName: 'Product 40',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 21000,
+    stock: 50,
+    rating: 3.5,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1040, sellerName: 'Seller 40' },
+    createdAt: ISODate('2026-09-09T04:16:02.165Z')
+  },
+  {
+    _id: ObjectId('6aa0dd82bf0c1c5c7fa25340'),
+    productId: 41,
+    productName: 'Product 41',
+    category: 'Mobile',
+    brand: 'HP',
+    price: 21500,
+    stock: 51,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1041, sellerName: 'Seller 41' },
+    createdAt: ISODate('2026-09-09T04:16:02.269Z')
+  },
+  {
+    _id: ObjectId('6aa0dd82bf0c1c5c7fa25341'),
+    productId: 42,
+    productName: 'Product 42',
+    category: 'Headphones',
+    brand: 'Dell',
+    price: 22000,
+    stock: 52,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1042, sellerName: 'Seller 42' },
+    createdAt: ISODate('2026-09-09T04:16:02.373Z')
+  },
+  {
+    _id: ObjectId('6aa0dd82bf0c1c5c7fa25342'),
+    productId: 43,
+    productName: 'Product 43',
+    category: 'Keyboard',
+    brand: 'Samsung',
+    price: 22500,
+    stock: 53,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1043, sellerName: 'Seller 43' },
+    createdAt: ISODate('2026-09-09T04:16:02.474Z')
+  },
+  {
+    _id: ObjectId('6aa0dd82bf0c1c5c7fa25343'),
+    productId: 44,
+    productName: 'Product 44',
+    category: 'Mouse',
+    brand: 'HP',
+    price: 23000,
+    stock: 54,
+    rating: 4,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1044, sellerName: 'Seller 44' },
+    createdAt: ISODate('2026-09-09T04:16:02.778Z')
+  },
+  {
+    _id: ObjectId('6aa0dd82bf0c1c5c7fa25344'),
+    productId: 45,
+    productName: 'Product 45',
+    category: 'Laptop',
+    brand: 'Dell',
+    price: 23500,
+    stock: 55,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1045, sellerName: 'Seller 45' },
+    createdAt: ISODate('2026-09-09T04:16:02.986Z')
+  },
+  {
+    _id: ObjectId('6aa0dd83bf0c1c5c7fa25345'),
+    productId: 46,
+    productName: 'Product 46',
+    category: 'Mobile',
+    brand: 'Samsung',
+    price: 24000,
+    stock: 56,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1046, sellerName: 'Seller 46' },
+    createdAt: ISODate('2026-09-09T04:16:03.088Z')
+  },
+  {
+    _id: ObjectId('6aa0dd83bf0c1c5c7fa25346'),
+    productId: 47,
+    productName: 'Product 47',
+    category: 'Headphones',
+    brand: 'HP',
+    price: 24500,
+    stock: 57,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1047, sellerName: 'Seller 47' },
+    createdAt: ISODate('2026-09-09T04:16:03.187Z')
+  },
+  {
+    _id: ObjectId('6aa0dd83bf0c1c5c7fa25347'),
+    productId: 48,
+    productName: 'Product 48',
+    category: 'Keyboard',
+    brand: 'Dell',
+    price: 25000,
+    stock: 58,
+    rating: 3,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1048, sellerName: 'Seller 48' },
+    createdAt: ISODate('2026-09-09T04:16:03.292Z')
+  },
+  {
+    _id: ObjectId('6aa0dd83bf0c1c5c7fa25348'),
+    productId: 49,
+    productName: 'Product 49',
+    category: 'Mouse',
+    brand: 'Samsung',
+    price: 25500,
+    stock: 59,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1049, sellerName: 'Seller 49' },
+    createdAt: ISODate('2026-09-09T04:16:03.388Z')
+  },
+  {
+    _id: ObjectId('6aa0dd83bf0c1c5c7fa25349'),
+    productId: 50,
+    productName: 'Product 50',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 26000,
+    stock: 60,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1050, sellerName: 'Seller 50' },
+    createdAt: ISODate('2026-09-09T04:16:03.510Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcdbf0c1c5c7fa25370'),
+    productId: 39,
+    productName: 'Product 39',
+    category: 'Mouse',
+    brand: 'Dell',
+    price: 20500,
+    stock: 49,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1039, sellerName: 'Seller 39' },
+    createdAt: ISODate('2026-09-09T04:17:17.030Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcdbf0c1c5c7fa25371'),
+    productId: 40,
+    productName: 'Product 40',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 21000,
+    stock: 50,
+    rating: 3.5,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1040, sellerName: 'Seller 40' },
+    createdAt: ISODate('2026-09-09T04:17:17.131Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcdbf0c1c5c7fa25372'),
+    productId: 41,
+    productName: 'Product 41',
+    category: 'Mobile',
+    brand: 'HP',
+    price: 21500,
+    stock: 51,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1041, sellerName: 'Seller 41' },
+    createdAt: ISODate('2026-09-09T04:17:17.233Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcdbf0c1c5c7fa25373'),
+    productId: 42,
+    productName: 'Product 42',
+    category: 'Headphones',
+    brand: 'Dell',
+    price: 22000,
+    stock: 52,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1042, sellerName: 'Seller 42' },
+    createdAt: ISODate('2026-09-09T04:17:17.337Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcdbf0c1c5c7fa25374'),
+    productId: 43,
+    productName: 'Product 43',
+    category: 'Keyboard',
+    brand: 'Samsung',
+    price: 22500,
+    stock: 53,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1043, sellerName: 'Seller 43' },
+    createdAt: ISODate('2026-09-09T04:17:17.404Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcdbf0c1c5c7fa25375'),
+    productId: 44,
+    productName: 'Product 44',
+    category: 'Mouse',
+    brand: 'HP',
+    price: 23000,
+    stock: 54,
+    rating: 4,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1044, sellerName: 'Seller 44' },
+    createdAt: ISODate('2026-09-09T04:17:17.542Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcdbf0c1c5c7fa25376'),
+    productId: 45,
+    productName: 'Product 45',
+    category: 'Laptop',
+    brand: 'Dell',
+    price: 23500,
+    stock: 55,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1045, sellerName: 'Seller 45' },
+    createdAt: ISODate('2026-09-09T04:17:17.643Z')
+  },
+  {
+    _id: ObjectId('6aa0ddcdbf0c1c5c7fa25377'),
+    productId: 46,
+    productName: 'Product 46',
+    category: 'Mobile',
+    brand: 'Samsung',
+    price: 24000,
+    stock: 56,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1046, sellerName: 'Seller 46' },
+    createdAt: ISODate('2026-09-09T04:17:17.848Z')
+  }
+]
+Type "it" for more
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({ price: {$gt: 10000, $lt: 30000}})
+[
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa2532a'),
+    productId: 19,
+    productName: 'Product 19',
+    category: 'Mouse',
+    brand: 'Samsung',
+    price: 10500,
+    stock: 29,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1019, sellerName: 'Seller 19' },
+    createdAt: ISODate('2026-09-09T04:15:58.993Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa2532b'),
+    productId: 20,
+    productName: 'Product 20',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 11000,
+    stock: 30,
+    rating: 4,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1020, sellerName: 'Seller 20' },
+    createdAt: ISODate('2026-09-09T04:15:59.096Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa2532c'),
+    productId: 21,
+    productName: 'Product 21',
+    category: 'Mobile',
+    brand: 'Dell',
+    price: 11500,
+    stock: 31,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1021, sellerName: 'Seller 21' },
+    createdAt: ISODate('2026-09-09T04:15:59.196Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa2532d'),
+    productId: 22,
+    productName: 'Product 22',
+    category: 'Headphones',
+    brand: 'Samsung',
+    price: 12000,
+    stock: 32,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1022, sellerName: 'Seller 22' },
+    createdAt: ISODate('2026-09-09T04:15:59.663Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa2532e'),
+    productId: 23,
+    productName: 'Product 23',
+    category: 'Keyboard',
+    brand: 'HP',
+    price: 12500,
+    stock: 33,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1023, sellerName: 'Seller 23' },
+    createdAt: ISODate('2026-09-09T04:15:59.765Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa2532f'),
+    productId: 24,
+    productName: 'Product 24',
+    category: 'Mouse',
+    brand: 'Dell',
+    price: 13000,
+    stock: 34,
+    rating: 3,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1024, sellerName: 'Seller 24' },
+    createdAt: ISODate('2026-09-09T04:15:59.906Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa25330'),
+    productId: 25,
+    productName: 'Product 25',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 13500,
+    stock: 35,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1025, sellerName: 'Seller 25' },
+    createdAt: ISODate('2026-09-09T04:15:59.980Z')
+  },
+  {
+    _id: ObjectId('6aa0dd80bf0c1c5c7fa25331'),
+    productId: 26,
+    productName: 'Product 26',
+    category: 'Mobile',
+    brand: 'HP',
+    price: 14000,
+    stock: 36,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1026, sellerName: 'Seller 26' },
+    createdAt: ISODate('2026-09-09T04:16:00.125Z')
+  },
+  {
+    _id: ObjectId('6aa0dd80bf0c1c5c7fa25332'),
+    productId: 27,
+    productName: 'Product 27',
+    category: 'Headphones',
+    brand: 'Dell',
+    price: 14500,
+    stock: 37,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1027, sellerName: 'Seller 27' },
+    createdAt: ISODate('2026-09-09T04:16:00.219Z')
+  },
+  {
+    _id: ObjectId('6aa0dd80bf0c1c5c7fa25333'),
+    productId: 28,
+    productName: 'Product 28',
+    category: 'Keyboard',
+    brand: 'Samsung',
+    price: 15000,
+    stock: 38,
+    rating: 3.5,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1028, sellerName: 'Seller 28' },
+    createdAt: ISODate('2026-09-09T04:16:00.304Z')
+  },
+  {
+    _id: ObjectId('6aa0dd80bf0c1c5c7fa25334'),
+    productId: 29,
+    productName: 'Product 29',
+    category: 'Mouse',
+    brand: 'HP',
+    price: 15500,
+    stock: 39,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1029, sellerName: 'Seller 29' },
+    createdAt: ISODate('2026-09-09T04:16:00.427Z')
+  },
+  {
+    _id: ObjectId('6aa0dd80bf0c1c5c7fa25335'),
+    productId: 30,
+    productName: 'Product 30',
+    category: 'Laptop',
+    brand: 'Dell',
+    price: 16000,
+    stock: 40,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1030, sellerName: 'Seller 30' },
+    createdAt: ISODate('2026-09-09T04:16:00.527Z')
+  },
+  {
+    _id: ObjectId('6aa0dd80bf0c1c5c7fa25336'),
+    productId: 31,
+    productName: 'Product 31',
+    category: 'Mobile',
+    brand: 'Samsung',
+    price: 16500,
+    stock: 41,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1031, sellerName: 'Seller 31' },
+    createdAt: ISODate('2026-09-09T04:16:00.633Z')
+  },
+  {
+    _id: ObjectId('6aa0dd80bf0c1c5c7fa25337'),
+    productId: 32,
+    productName: 'Product 32',
+    category: 'Headphones',
+    brand: 'HP',
+    price: 17000,
+    stock: 42,
+    rating: 4,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1032, sellerName: 'Seller 32' },
+    createdAt: ISODate('2026-09-09T04:16:00.843Z')
+  },
+  {
+    _id: ObjectId('6aa0dd81bf0c1c5c7fa25338'),
+    productId: 33,
+    productName: 'Product 33',
+    category: 'Keyboard',
+    brand: 'Dell',
+    price: 17500,
+    stock: 43,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1033, sellerName: 'Seller 33' },
+    createdAt: ISODate('2026-09-09T04:16:01.040Z')
+  },
+  {
+    _id: ObjectId('6aa0dd81bf0c1c5c7fa25339'),
+    productId: 34,
+    productName: 'Product 34',
+    category: 'Mouse',
+    brand: 'Samsung',
+    price: 18000,
+    stock: 44,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1034, sellerName: 'Seller 34' },
+    createdAt: ISODate('2026-09-09T04:16:01.144Z')
+  },
+  {
+    _id: ObjectId('6aa0dd81bf0c1c5c7fa2533a'),
+    productId: 35,
+    productName: 'Product 35',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 18500,
+    stock: 45,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1035, sellerName: 'Seller 35' },
+    createdAt: ISODate('2026-09-09T04:16:01.461Z')
+  },
+  {
+    _id: ObjectId('6aa0dd81bf0c1c5c7fa2533b'),
+    productId: 36,
+    productName: 'Product 36',
+    category: 'Mobile',
+    brand: 'Dell',
+    price: 19000,
+    stock: 46,
+    rating: 3,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1036, sellerName: 'Seller 36' },
+    createdAt: ISODate('2026-09-09T04:16:01.669Z')
+  },
+  {
+    _id: ObjectId('6aa0dd81bf0c1c5c7fa2533c'),
+    productId: 37,
+    productName: 'Product 37',
+    category: 'Headphones',
+    brand: 'Samsung',
+    price: 19500,
+    stock: 47,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1037, sellerName: 'Seller 37' },
+    createdAt: ISODate('2026-09-09T04:16:01.758Z')
+  },
+  {
+    _id: ObjectId('6aa0dd81bf0c1c5c7fa2533d'),
+    productId: 38,
+    productName: 'Product 38',
+    category: 'Keyboard',
+    brand: 'HP',
+    price: 20000,
+    stock: 48,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1038, sellerName: 'Seller 38' },
+    createdAt: ISODate('2026-09-09T04:16:01.862Z')
+  }
+]
+Type "it" for more
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({ price: {$lt: 20000}})
+[
+  {
+    _id: ObjectId('6aa0dd7cbf0c1c5c7fa25318'),
+    productId: 1,
+    productName: 'Product 1',
+    category: 'Mobile',
+    brand: 'Samsung',
+    price: 1500,
+    stock: 11,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1001, sellerName: 'Seller 1' },
+    createdAt: ISODate('2026-09-09T04:15:56.629Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7cbf0c1c5c7fa25319'),
+    productId: 2,
+    productName: 'Product 2',
+    category: 'Headphones',
+    brand: 'HP',
+    price: 2000,
+    stock: 12,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1002, sellerName: 'Seller 2' },
+    createdAt: ISODate('2026-09-09T04:15:56.867Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa2531a'),
+    productId: 3,
+    productName: 'Product 3',
+    category: 'Keyboard',
+    brand: 'Dell',
+    price: 2500,
+    stock: 13,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1003, sellerName: 'Seller 3' },
+    createdAt: ISODate('2026-09-09T04:15:57.049Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa2531b'),
+    productId: 4,
+    productName: 'Product 4',
+    category: 'Mouse',
+    brand: 'Samsung',
+    price: 3000,
+    stock: 14,
+    rating: 3.5,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1004, sellerName: 'Seller 4' },
+    createdAt: ISODate('2026-09-09T04:15:57.149Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa2531c'),
+    productId: 5,
+    productName: 'Product 5',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 3500,
+    stock: 15,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1005, sellerName: 'Seller 5' },
+    createdAt: ISODate('2026-09-09T04:15:57.252Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa2531d'),
+    productId: 6,
+    productName: 'Product 6',
+    category: 'Mobile',
+    brand: 'Dell',
+    price: 4000,
+    stock: 16,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1006, sellerName: 'Seller 6' },
+    createdAt: ISODate('2026-09-09T04:15:57.354Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa2531e'),
+    productId: 7,
+    productName: 'Product 7',
+    category: 'Headphones',
+    brand: 'Samsung',
+    price: 4500,
+    stock: 17,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1007, sellerName: 'Seller 7' },
+    createdAt: ISODate('2026-09-09T04:15:57.458Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa2531f'),
+    productId: 8,
+    productName: 'Product 8',
+    category: 'Keyboard',
+    brand: 'HP',
+    price: 5000,
+    stock: 18,
+    rating: 4,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1008, sellerName: 'Seller 8' },
+    createdAt: ISODate('2026-09-09T04:15:57.606Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa25320'),
+    productId: 9,
+    productName: 'Product 9',
+    category: 'Mouse',
+    brand: 'Dell',
+    price: 5500,
+    stock: 19,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1009, sellerName: 'Seller 9' },
+    createdAt: ISODate('2026-09-09T04:15:57.671Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa25321'),
+    productId: 10,
+    productName: 'Product 10',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 6000,
+    stock: 20,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1010, sellerName: 'Seller 10' },
+    createdAt: ISODate('2026-09-09T04:15:57.763Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa25322'),
+    productId: 11,
+    productName: 'Product 11',
+    category: 'Mobile',
+    brand: 'HP',
+    price: 6500,
+    stock: 21,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1011, sellerName: 'Seller 11' },
+    createdAt: ISODate('2026-09-09T04:15:57.865Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa25323'),
+    productId: 12,
+    productName: 'Product 12',
+    category: 'Headphones',
+    brand: 'Dell',
+    price: 7000,
+    stock: 22,
+    rating: 3,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1012, sellerName: 'Seller 12' },
+    createdAt: ISODate('2026-09-09T04:15:57.975Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25324'),
+    productId: 13,
+    productName: 'Product 13',
+    category: 'Keyboard',
+    brand: 'Samsung',
+    price: 7500,
+    stock: 23,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1013, sellerName: 'Seller 13' },
+    createdAt: ISODate('2026-09-09T04:15:58.176Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25325'),
+    productId: 14,
+    productName: 'Product 14',
+    category: 'Mouse',
+    brand: 'HP',
+    price: 8000,
+    stock: 24,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1014, sellerName: 'Seller 14' },
+    createdAt: ISODate('2026-09-09T04:15:58.276Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25326'),
+    productId: 15,
+    productName: 'Product 15',
+    category: 'Laptop',
+    brand: 'Dell',
+    price: 8500,
+    stock: 25,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1015, sellerName: 'Seller 15' },
+    createdAt: ISODate('2026-09-09T04:15:58.480Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25327'),
+    productId: 16,
+    productName: 'Product 16',
+    category: 'Mobile',
+    brand: 'Samsung',
+    price: 9000,
+    stock: 26,
+    rating: 3.5,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1016, sellerName: 'Seller 16' },
+    createdAt: ISODate('2026-09-09T04:15:58.583Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25328'),
+    productId: 17,
+    productName: 'Product 17',
+    category: 'Headphones',
+    brand: 'HP',
+    price: 9500,
+    stock: 27,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1017, sellerName: 'Seller 17' },
+    createdAt: ISODate('2026-09-09T04:15:58.691Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa25329'),
+    productId: 18,
+    productName: 'Product 18',
+    category: 'Keyboard',
+    brand: 'Dell',
+    price: 10000,
+    stock: 28,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1018, sellerName: 'Seller 18' },
+    createdAt: ISODate('2026-09-09T04:15:58.889Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7ebf0c1c5c7fa2532a'),
+    productId: 19,
+    productName: 'Product 19',
+    category: 'Mouse',
+    brand: 'Samsung',
+    price: 10500,
+    stock: 29,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1019, sellerName: 'Seller 19' },
+    createdAt: ISODate('2026-09-09T04:15:58.993Z')
+  },
+  {
+    _id: ObjectId('6aa0dd7fbf0c1c5c7fa2532b'),
+    productId: 20,
+    productName: 'Product 20',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 11000,
+    stock: 30,
+    rating: 4,
+    inStock: false,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1020, sellerName: 'Seller 20' },
+    createdAt: ISODate('2026-09-09T04:15:59.096Z')
+  }
+]
+Type "it" for more
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({ "seller.sellerName" : "Seller 10"})
+[
+  {
+    _id: ObjectId('6aa0dd7dbf0c1c5c7fa25321'),
+    productId: 10,
+    productName: 'Product 10',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 6000,
+    stock: 20,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1010, sellerName: 'Seller 10' },
+    createdAt: ISODate('2026-09-09T04:15:57.763Z')
+  },
+  {
+    _id: ObjectId('6aa0ddc9bf0c1c5c7fa25353'),
+    productId: 10,
+    productName: 'Product 10',
+    category: 'Laptop',
+    brand: 'Samsung',
+    price: 6000,
+    stock: 20,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1010, sellerName: 'Seller 10' },
+    createdAt: ISODate('2026-09-09T04:17:13.448Z')
+  }
+]
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.updateOne({productID : 1}, { $set : {price : 10000} })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({ productId : 1})
+[
+  {
+    _id: ObjectId('6aa0e487bf0c1c5c7fa2537c'),
+    productId: 1,
+    productName: 'Product 1',
+    category: 'Mobile',
+    brand: 'Samsung',
+    price: 1500,
+    stock: 11,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1001, sellerName: 'Seller 1' },
+    createdAt: ISODate('2026-09-09T04:45:59.499Z')
+  }
+]
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({ productId : 2})
+[
+  {
+    _id: ObjectId('6aa0e487bf0c1c5c7fa2537d'),
+    productId: 2,
+    productName: 'Product 2',
+    category: 'Headphones',
+    brand: 'HP',
+    price: 2000,
+    stock: 12,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1002, sellerName: 'Seller 2' },
+    createdAt: ISODate('2026-09-09T04:45:59.719Z')
+  }
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.updateMany({productID : 2}, { $set : {price : 15000, stock: 20} })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({ productId : 2})
+[
+  {
+    _id: ObjectId('6aa0e487bf0c1c5c7fa2537d'),
+    productId: 2,
+    productName: 'Product 2',
+    category: 'Headphones',
+    brand: 'HP',
+    price: 2000,
+    stock: 12,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1002, sellerName: 'Seller 2' },
+    createdAt: ISODate('2026-09-09T04:45:59.719Z')
+  }
+]
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.updateMany({productId : 2}, { $set : {price : 15000, stock: 20} })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({ productId : 2})
+[
+  {
+    _id: ObjectId('6aa0e487bf0c1c5c7fa2537d'),
+    productId: 2,
+    productName: 'Product 2',
+    category: 'Headphones',
+    brand: 'HP',
+    price: 15000,
+    stock: 20,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1002, sellerName: 'Seller 2' },
+    createdAt: ISODate('2026-09-09T04:45:59.719Z')
+  }
+]
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.updateMany({productId : 1}, { $set : {price : 14000, stock: 15} })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({ productId : 1})
+[
+  {
+    _id: ObjectId('6aa0e487bf0c1c5c7fa2537c'),
+    productId: 1,
+    productName: 'Product 1',
+    category: 'Mobile',
+    brand: 'Samsung',
+    price: 14000,
+    stock: 15,
+    rating: 3.5,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1001, sellerName: 'Seller 1' },
+    createdAt: ISODate('2026-09-09T04:45:59.499Z')
+  }
+]
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.updateOne({productId : 4}, { $push : {tags : "sales"} })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({productId: 4})
+[
+  {
+    _id: ObjectId('6aa0e488bf0c1c5c7fa2537f'),
+    productId: 4,
+    productName: 'Product 4',
+    category: 'Mouse',
+    brand: 'Samsung',
+    price: 3000,
+    stock: 14,
+    rating: 3.5,
+    inStock: false,
+    tags: [ 'electronics', 'featured', 'sales' ],
+    seller: { sellerId: 1004, sellerName: 'Seller 4' },
+    createdAt: ISODate('2026-09-09T04:46:00.028Z')
+  }
+]
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({productId: 5})
+[
+  {
+    _id: ObjectId('6aa0e488bf0c1c5c7fa25380'),
+    productId: 5,
+    productName: 'Product 5',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 3500,
+    stock: 15,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new' ],
+    seller: { sellerId: 1005, sellerName: 'Seller 5' },
+    createdAt: ISODate('2026-09-09T04:46:00.128Z')
+  }
+]
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.updateOne({productId : 5}, { $addToSet : {tags : "electronics2"} })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({productId: 5})
+[
+  {
+    _id: ObjectId('6aa0e488bf0c1c5c7fa25380'),
+    productId: 5,
+    productName: 'Product 5',
+    category: 'Laptop',
+    brand: 'HP',
+    price: 3500,
+    stock: 15,
+    rating: 4,
+    inStock: true,
+    tags: [ 'electronics', 'new', 'electronics2' ],
+    seller: { sellerId: 1005, sellerName: 'Seller 5' },
+    createdAt: ISODate('2026-09-09T04:46:00.128Z')
+  }
+]
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({productId: 6})
+[
+  {
+    _id: ObjectId('6aa0e488bf0c1c5c7fa25381'),
+    productId: 6,
+    productName: 'Product 6',
+    category: 'Mobile',
+    brand: 'Dell',
+    price: 4000,
+    stock: 16,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1006, sellerName: 'Seller 6' },
+    createdAt: ISODate('2026-09-09T04:46:00.236Z')
+  }
+]
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.updateOne({productId : 6}, { $inc : {stock : 24} })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({productId: 6})
+[
+  {
+    _id: ObjectId('6aa0e488bf0c1c5c7fa25381'),
+    productId: 6,
+    productName: 'Product 6',
+    category: 'Mobile',
+    brand: 'Dell',
+    price: 4000,
+    stock: 40,
+    rating: 3,
+    inStock: true,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1006, sellerName: 'Seller 6' },
+    createdAt: ISODate('2026-09-09T04:46:00.236Z')
+  }
+]
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.updateOne({productId : 6}, { $unset : {inStock: ""} })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Atlas atlas-clqdkj-shard-0 [primary] ecomDB> db.products.find({productId: 6})
+[
+  {
+    _id: ObjectId('6aa0e488bf0c1c5c7fa25381'),
+    productId: 6,
+    productName: 'Product 6',
+    category: 'Mobile',
+    brand: 'Dell',
+    price: 4000,
+    stock: 40,
+    rating: 3,
+    tags: [ 'electronics', 'featured' ],
+    seller: { sellerId: 1006, sellerName: 'Seller 6' },
+    createdAt: ISODate('2026-09-09T04:46:00.236Z')
+  }
+]
